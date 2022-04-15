@@ -10,6 +10,9 @@
     "format": "prettier --write \"src/**/*.ts\" \"src/**/*.tsx\" \"pages/**/*.tsx\"",
     "check": "tsc --noEmit"
   },
+  "resolutions": {
+    "@types/react": "17.0.33"
+  },
   "dependencies": {
     "@emotion/cache": "latest",
     "@emotion/react": "11.9.0",
@@ -20,12 +23,14 @@
     "fp-ts": "^2.11.10",
     "markdown-to-jsx": "^7.1.7",
     "next": "12.1.5",
-    "react": "latest",
-    "react-dom": "latest"
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "react-syntax-highlighter": "^15.5.0"
   },
   "devDependencies": {
     "@types/node": "17.0.24",
-    "@types/react": "latest",
+    "@types/react": "17.0.33",
+    "@types/react-syntax-highlighter": "^13.5.2",
     "eslint": "8.13.0",
     "eslint-config-next": "12.1.5",
     "prettier": "^2.6.2",

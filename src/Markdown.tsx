@@ -1,5 +1,7 @@
 import { Link, Typography } from "@mui/material";
 import ReactMarkdown, { MarkdownToJSX } from "markdown-to-jsx";
+import SyntaxHighlighter from "react-syntax-highlighter";
+import { monokai } from "react-syntax-highlighter/dist/cjs/styles/hljs";
 import React from "react";
 
 const options = {
@@ -37,12 +39,16 @@ const options = {
         },
         a: { component: Link, props: { variant: "body1" } },
         code: {
-            component: Typography,
+            component: SyntaxHighlighter,
             props: {
-                variant: "body1",
-                paragraph: true,
-                color: "secondary",
-                display: "inline",
+                customStyle:{
+                    display: "inline",
+                    background:"transparent",
+                    padding:"1.5px",
+                    color: "#474242"
+                },
+                style: monokai,
+                wrapLongLines:true
             },
         },
         img: {
